@@ -1,0 +1,521 @@
+/* Reset dan Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #fff;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+    transition: opacity 0.8s ease;
+}
+
+.heart-pulse {
+    font-size: 80px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+#loading-screen p {
+    margin-top: 20px;
+    font-size: 18px;
+    animation: fadeInOut 2s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.floating-hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.floating-hearts span {
+    position: absolute;
+    font-size: 30px;
+    animation: float 6s infinite ease-in-out;
+    opacity: 0.6;
+}
+
+.floating-hearts span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.floating-hearts span:nth-child(2) { left: 30%; animation-delay: 1s; }
+.floating-hearts span:nth-child(3) { left: 50%; animation-delay: 2s; }
+.floating-hearts span:nth-child(4) { left: 70%; animation-delay: 3s; }
+.floating-hearts span:nth-child(5) { left: 90%; animation-delay: 4s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(100vh) rotate(0deg); }
+    100% { transform: translateY(-100vh) rotate(360deg); }
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+    animation: bounceIn 1s ease;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.photo-frame {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    margin: 30px 0;
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease;
+}
+
+.photo-frame:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+.photo-placeholder {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.photo-placeholder span {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #764ba2;
+}
+
+/* Message Section */
+.message-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.message-container {
+    max-width: 600px;
+    width: 100%;
+}
+
+.envelope {
+    position: relative;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    animation: slideIn 1s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.letter h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #c44569;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.message-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.signature span {
+    color: #c44569;
+    font-weight: 600;
+}
+
+/* Gallery Section */
+.gallery-section {
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+
+.gallery-item {
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.photo-placeholder-small {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.photo-placeholder-small span {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.caption {
+    color: #333;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Cake Section */
+.cake-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.cake-section h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.cake-container {
+    position: relative;
+    margin: 40px 0;
+}
+
+.cake {
+    position: relative;
+    width: 250px;
+    height: 200px;
+}
+
+.plate {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 270px;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+.layer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+.layer-bottom {
+    bottom: 10px;
+    width: 250px;
+    height: 60px;
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+}
+
+.layer-middle {
+    bottom: 70px;
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(135deg, #A0522D 0%, #CD853F 100%);
+}
+
+.layer-top {
+    bottom: 120px;
+    width: 150px;
+    height: 40px;
+    background: linear-gradient(135deg, #CD853F 0%, #DEB887 100%);
+}
+
+.frosting {
+    position: absolute;
+    bottom: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 20px;
+    background: #FFB6C1;
+    border-radius: 10px 10px 0 0;
+}
+
+.candle {
+    position: absolute;
+    bottom: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 40px;
+    background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+    border-radius: 3px;
+}
+
+.flame {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 20px;
+    background: linear-gradient(135deg, #ffd700 0%, #ff6b6b 100%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: flicker 0.5s infinite alternate;
+    box-shadow: 0 0 20px #ffd700, 0 0 40px #ff6b6b;
+}
+
+@keyframes flicker {
+    0% { transform: translateX(-50%) scale(1); opacity: 1; }
+    100% { transform: translateX(-50%) scale(1.1); opacity: 0.8; }
+}
+
+.flame.out {
+    animation: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.wish-text {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    opacity: 0.9;
+}
+
+/* Wishes Section */
+.wishes-section {
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.wishes-section h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.wishes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+
+.wish-card {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.wish-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.3);
+}
+
+.wish-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.wish-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.final-message {
+    margin: 40px 0;
+    padding: 30px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.final-message p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.love-note {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #ff6b9d;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Confetti Canvas */
+#confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .photo-placeholder {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .envelope {
+        padding: 25px;
+    }
+    
+    .letter h2 {
+        font-size: 2rem;
+    }
+    
+    .gallery-section h2,
+    .cake-section h2,
+    .wishes-section h2 {
+        font-size: 2rem;
+    }
+    
+    .cake {
+        transform: scale(0.8);
+    }
+}
