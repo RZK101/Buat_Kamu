@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sayang! 💕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="heart-pulse"></div>
+        <p>Klik untuk membuka kejutan spesial ✨</p>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="hidden">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="floating-hearts">
+                <span>💕</span>
+                <span>💖</span>
+                <span>💗</span>
+                <span>💓</span>
+                <span>💞</span>
+            </div>
+            <h1 class="title">Selamat Ulang Tahun!</h1>
+            <p class="subtitle">Untuk seseorang yang sangat istimewa ❤️</p>
+            <div class="photo-frame">
+                <div class="photo-placeholder">
+                    <span>📸</span>
+                    <p>Foto Kamu Disini</p>
+                </div>
+            </div>
+            <button id="start-btn" class="btn-primary">Buka Pesan Spesial 🎁</button>
+        </section>
+
+        <!-- Message Section -->
+        <section id="message-section" class="message-section hidden">
+            <div class="message-container">
+                <div class="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="letter">
+                        <h2>Untuk Cinta Ku ❤️</h2>
+                        <div class="message-content">
+                            <p>Hai sayang,</p>
+                            <p>Selamat ulang tahun! 🎉</p>
+                            <p>Di hari yang spesial ini, aku ingin mengucapkan terima kasih karena sudah lahir ke dunia dan membuat hidupku lebih berarti.</p>
+                            <p>Kamu adalah cahaya dalam hidupku, senyumanmu adalah hal terindah yang pernah aku lihat, dan cintamu adalah anugerah terbesar.</p>
+                            <p>Semoga di usia yang baru ini, kamu diberikan kesehatan, kebahagiaan, dan semua impianmu terwujud. Aku akan selalu ada untukmu, mendukungmu, dan mencintaimu selamanya.</p>
+                            <p>I love you more than words can express! 💕</p>
+                            <p class="signature">Selamanya milikmu,<br><span>Nama Kamu</span></p>
+                        </div>
+                    </div>
+                </div>
+                <button id="next-btn" class="btn-primary">Lihat Galeri Kita 📷</button>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery-section" class="gallery-section hidden">
+            <h2>Momen Indah Kita Bersama 💑</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="photo-placeholder-small">
+                        <span>📸</span>
+                        <p>Foto 1</p>
+                    </div>
+                    <p class="caption">Momen pertama kita</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="photo-placeholder-small">
+                        <span>📸</span>
+                        <p>Foto 2</p>
+                    </div>
+                    <p class="caption">Tanggal spesial</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="photo-placeholder-small">
+                        <span>📸</span>
+                        <p>Foto 3</p>
+                    </div>
+                    <p class="caption">Senyuman terindah</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="photo-placeholder-small">
+                        <span>📸</span>
+                        <p>Foto 4</p>
+                    </div>
+                    <p class="caption">Kenangan manis</p>
+                </div>
+            </div>
+            <button id="cake-btn" class="btn-primary">Tiup Lilin Bersama 🎂</button>
+        </section>
+
+        <!-- Cake Section -->
+        <section id="cake-section" class="cake-section hidden">
+            <h2>Make a Wish! ✨</h2>
+            <div class="cake-container">
+                <div class="cake">
+                    <div class="plate"></div>
+                    <div class="layer layer-bottom"></div>
+                    <div class="layer layer-middle"></div>
+                    <div class="layer layer-top"></div>
+                    <div class="frosting"></div>
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="wish-text">Tiup lilinnya dan buat harapan!</p>
+            <button id="blow-btn" class="btn-primary">Tiup Lilin 🌬️</button>
+        </section>
+
+        <!-- Final Wishes Section -->
+        <section id="wishes-section" class="wishes-section hidden">
+            <h2>Harapan Untukmu 🌟</h2>
+            <div class="wishes-container">
+                <div class="wish-card">
+                    <span class="wish-icon">🎈</span>
+                    <p>Semoga selalu sehat dan bahagia</p>
+                </div>
+                <div class="wish-card">
+                    <span class="wish-icon">⭐</span>
+                    <p>Semoga semua impianmu tercapai</p>
+                </div>
+                <div class="wish-card">
+                    <span class="wish-icon">💫</span>
+                    <p>Semoga tahun ini penuh kesuksesan</p>
+                </div>
+                <div class="wish-card">
+                    <span class="wish-icon">🌈</span>
+                    <p>Semoga hari-harimu selalu cerah</p>
+                </div>
+                <div class="wish-card">
+                    <span class="wish-icon">💝</span>
+                    <p>Cinta kita semakin kuat selamanya</p>
+                </div>
+            </div>
+            <div class="final-message">
+                <p>Terima kasih telah menjadi bagian terindah dalam hidupku.</p>
+                <p class="love-note">I Love You Forever! 💕</p>
+            </div>
+            <button id="restart-btn" class="btn-secondary">Putar Lagi 🔄</button>
+        </section>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
